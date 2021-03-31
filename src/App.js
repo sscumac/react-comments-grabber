@@ -4,7 +4,6 @@ import ReactPaginate from 'react-paginate';
 
 
 import Comment from "./components/Comment";
-
 import Navbar from './components/Navbar';
 import Dashboard from './contents/Dashboard';
 import Comments from './contents/Comments';
@@ -58,7 +57,6 @@ function App() {
     const newComment = await res.json()
 
   }
-
 
   // Delete Comment
   async function deleteComment(id) {
