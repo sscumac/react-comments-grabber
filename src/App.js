@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react' /* a hook to let us use state for this component */
-import { BrowserRouter as Router, Route, } from "react-router-dom";
+import { BrowserRouter as Router, Route, useParams, } from "react-router-dom";
 import ReactPaginate from 'react-paginate';
 
 
@@ -24,7 +24,6 @@ function App() {
   const [offset, setOffset] = useState(0);
   const [perPage] = useState(12);
   const [pageCount, setPageCount] = useState(0)
-
 
 
   async function fetchComments() {
@@ -57,9 +56,6 @@ function App() {
     })
 
     const newComment = await res.json()
-
-    comments.push(newComment)
-    setComments(comments)
 
   }
 

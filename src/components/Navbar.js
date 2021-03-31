@@ -10,7 +10,7 @@ function Navbar() {
           <NavItem item="Dashboard" tolink="/dashboard" ></NavItem>
           <NavItem item="Comments" tolink="/comments" ></NavItem>
           <NavItem item="Admin" tolink="/admin" ></NavItem>
-          <NavItem item="User" tolink="/user" ></NavItem>
+          <NavItem item="L" tolink="/user" ></NavItem>
         </ul>
       </nav>
     )
