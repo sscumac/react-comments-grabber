@@ -11,17 +11,17 @@ function AddComment({ onAdd, onShow }) {
   let visibility = {}
   onShow ? (visibility = { visibility: "unset" }) : (visibility = { visibility: "hidden" })
 
-  // we are not calling onAdd directly
+  // not calling onAdd directly
   function submit(eve) {
     eve.preventDefault()
-    // just some validation
+    
     if(!name) {
       alert("please provide a name")
       return
     }
 
     onAdd({ name, body, email })
-    // clear the form
+    
     setName("")
     setBody("")
     setEmail("")
