@@ -4,7 +4,7 @@ class Comments extends Component {
 
   render() {
     return (
-      <h1 style={{ display: "none" }}>Comments</h1>
+      <h1>Comments</h1>
     )
   }
 }
