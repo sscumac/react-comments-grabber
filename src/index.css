@@ -68,25 +68,35 @@ nav a {
 .btn {
   background-color: black;
   color: white !important;
-  height: 50px;
   border-radius: 5px;
-  width: 50px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 15%;
   align-items: center;
+  height: 15%;
+}
+
+.comment-create {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-create .btn{
   
 }
 
+.add-form {
+
+}
 
 .comment-card {
-  /* margin: 2% 0; */
   border-radius: 10px;
-  /* overflow: hidden; */
   background-color: #F5FCFF;
   position: relative;
   border-radius: 10px;
@@ -100,17 +110,25 @@ nav a {
   padding: 0 10px ;
   background-color: #EFEFFF;
   border-radius: 10px 10px 0 0;
+  height: 3.5rem;
+  padding-top: 3px;
 }
+
 
 .comment-header h5 {
   text-align: left;
-  font-size: 11px;
+  font-size: 14px;
+  overflow: hidden;
+  height: 20px;
 }
 
 .comment-main {
   padding: 0 10px ;
   text-align: justify;
   position: relative;
+  height: 90px;
+  display: flex;
+  align-items:center;
 }
 
 .comment-footer {
@@ -128,13 +146,8 @@ nav a {
   right: 0.5rem;
 }
 
-.comment-header {
-  height: 5rem;
-}
-
 .comment-card p {
   font-size: 10px;
-  
 }
 
 h1 {
@@ -152,7 +165,7 @@ h1 {
   font-size: 14px;
 }
 
-.pagination > li > a{
+.pagination li a{
   border: 1px solid #ffffff ;
   padding: 1px 6px;
   border-radius: 50%;
@@ -160,7 +173,7 @@ h1 {
   cursor: pointer;
 }
 
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+.pagination .active a{
   background-color: #55ACEE ;
   padding: 1px 6px;
   outline: none ;
@@ -170,7 +183,6 @@ h1 {
 .pagination li:focus {
   outline: 1px solid
 }
-
 
 ul {
   list-style-type:none;

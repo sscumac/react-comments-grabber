@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react' /* a hook to let us use state for th
 import { BrowserRouter as Router, Route, } from "react-router-dom";
 import ReactPaginate from 'react-paginate';
 
-import Header from './components/Header'
+
 import Comment from "./components/Comment";
-import AddComment from "./components/AddComment";
+
 import Navbar from './components/Navbar';
 import Dashboard from './contents/Dashboard';
 import Comments from './contents/Comments';
@@ -75,17 +75,12 @@ function App() {
   }
 
 
-
-
-
   return (
     <Router>
       <Navbar />
       <div className="container">
         <Route exact path="/Comments">
-          <Comments />
-          <Header onAdd={() => setShowForm(!showForm)} showForm={showForm} />
-          {showForm && <AddComment onAdd={addComment} />} {/* short ternary w/o else */}
+          <Comments onAdd={() => setShowForm(!showForm)} showForm={showForm} />
           <div className="comments-grid">
             {comments}
           </div>
@@ -122,9 +117,6 @@ function App() {
   );
 }
 
-Header.defaultProps = {
-  title: 'Task Tracker',
-}
 
 export default App;
 

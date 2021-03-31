@@ -14,7 +14,6 @@ const Button = ({color, text, height, onClick}) => { /* setting two props for th
 Button.propTypes = {
   text: PropTypes.string,
   color: PropTypes.string,
-  color: PropTypes.string,
   onClick: PropTypes.func,
 }
 

@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
 
-class Comments extends Component {
+function Admin() {
 
-  render() {
-    return (
+  return(
+    
       <h1>Admin</h1>
-    )
-  }
+    
+  )
 }
 
-export default Comments
+export default Admin

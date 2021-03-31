@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 
-class Tasks extends Component {
-
-  render() {
-    return (
+function Tasks() {
+  return (
+    
       <h1>Tasks</h1>
-    )
-  }
+    
+  )
 }
 
 export default Tasks
