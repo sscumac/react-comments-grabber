@@ -26,15 +26,37 @@ nav ul {
   height: 70px;
 }
 
+nav ul li {
+  /* width: 10%; */
+  height: 90%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li:hover a, nav ul li:hover {
+  background-color: white;
+  color: black;
+}
+
 nav ul li:first-child {
   width: 80%;
+  text-align: left;
+}
+
+nav ul li:first-child:hover a, nav ul li:first-child:hover {
+  background-color: unset;
+  color: white;
 }
 
 nav a {
   text-decoration: none;
   color: white;
-  padding-right: 1vw;
+  margin: 15px;
 }
+
+
+    
 
 .container {
   text-align: center;
@@ -65,34 +87,78 @@ nav a {
   grid-column: 1 / 3;
 }
 
+input[type="submit"] {
+  padding: 0;
+}
+
 .btn {
   background-color: black;
-  color: white !important;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  transition: all 0.5s;
+  border: none;
+  z-index: 10;
+  position: absolute;
+  right: 0;
 }
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-save {
+  border: none;
+  font-weight: bold;
+  background-color: unset;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: none !important;
+  transition: color 0.3s;
+}
+
+.btn-save:active {
+  outline: none;
+  color: grey;
+}
+
+.btn-save:focus {
+  outline: none;
+}
+
+
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 15%;
+  position: relative;
 }
 
 .comment-create {
   display: flex;
-  width: 400px;
+  width: 300px;
   justify-content: space-between;
   align-items: center;
 }
 
-.comment-create .btn{
-  
+.add-form {
+  width: 210px;
+  text-align: left;
 }
 
-.add-form {
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
 
+.form-control input {
+  border-bottom: solid 1px black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
 .comment-card {
@@ -131,12 +197,14 @@ nav a {
   align-items:center;
 }
 
+
+
 .comment-footer {
   background-color: #F5FCFF;
 }
 
 .delete {
-  color: rgb(179, 36, 36);
+  color: black;
   font-weight: 900;
   cursor: pointer;
   margin: unset;
@@ -144,14 +212,18 @@ nav a {
   position:absolute;
   top: 0.2rem;
   right: 0.5rem;
+  transition: all 0.3s;
+}
+
+.delete:hover {
+  color: red;
+  font-size: larger;
+  top: -0.5rem;
+  right: 0.6rem;
 }
 
 .comment-card p {
   font-size: 10px;
-}
-
-h1 {
-  color: red;
 }
 
 .pagination {

@@ -4,10 +4,11 @@ import Button from '../components/Button';
 const Comments = ( {showForm, addComment, onAdd}) => {
   return (
     <div className="header">
-      <h1>Comments</h1>
+      <h2>Comments</h2>
       <div className="comment-create">
-        {showForm && <AddComment onAdd={addComment} />}
-        <Button color={showForm ? "red" : "black"} height={50} text={showForm ? "close" : "create comment"} onClick={onAdd} />
+        {/* {showForm && <AddComment onAdd={addComment} />} */}
+        <AddComment onAdd={addComment} onShow={showForm} />
+        <Button color={showForm ? "red" : "white"} bcolor={showForm ? "white" : "black"} height={50} text={showForm ? "close" : "create comment"} onClick={onAdd} />
       </div>
     </div>
  )

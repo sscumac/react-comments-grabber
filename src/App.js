@@ -74,7 +74,6 @@ function App() {
       : alert('Error Deleting This Comment')
   }
 
-
   return (
     <Router>
       <Navbar />
