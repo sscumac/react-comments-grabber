@@ -11,3 +11,168 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  background-color: black;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: unset;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+nav ul li:first-child {
+  width: 80%;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding-right: 1vw;
+}
+
+.container {
+  text-align: center;
+  height: 100vh;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comments-grid {
+  
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25vh 1fr 1fr 1fr; */
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.comment-card:nth-child(6n) {
+  grid-column: 3 / 5;
+}
+
+.comment-card:nth-child(5) {
+  grid-column: 1 / 3;
+}
+
+.comment-card:nth-child(11) {
+  grid-column: 1 / 3;
+}
+
+.btn {
+  background-color: black;
+  color: white !important;
+  height: 50px;
+  border-radius: 5px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15%;
+  align-items: center;
+  
+}
+
+
+.comment-card {
+  /* margin: 2% 0; */
+  border-radius: 10px;
+  /* overflow: hidden; */
+  background-color: #F5FCFF;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 2px 3px 4px rgb(77 77 77 / 22%)
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px ;
+  background-color: #EFEFFF;
+  border-radius: 10px 10px 0 0;
+}
+
+.comment-header h5 {
+  text-align: left;
+  font-size: 11px;
+}
+
+.comment-main {
+  padding: 0 10px ;
+  text-align: justify;
+  position: relative;
+}
+
+.comment-footer {
+  background-color: #F5FCFF;
+}
+
+.delete {
+  color: rgb(179, 36, 36);
+  font-weight: 900;
+  cursor: pointer;
+  margin: unset;
+  text-align: center;
+  position:absolute;
+  top: 0.2rem;
+  right: 0.5rem;
+}
+
+.comment-header {
+  height: 5rem;
+}
+
+.comment-card p {
+  font-size: 10px;
+  
+}
+
+h1 {
+  color: red;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination li {
+  color: black;
+  padding: 0 8px;
+  font-size: 14px;
+}
+
+.pagination > li > a{
+  border: 1px solid #ffffff ;
+  padding: 1px 6px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #55ACEE ;
+  padding: 1px 6px;
+  outline: none ;
+  color: white;
+}
+
+.pagination li:focus {
+  outline: 1px solid
+}
+
+
+ul {
+  list-style-type:none;
+}
+
