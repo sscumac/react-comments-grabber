@@ -1,4 +1,5 @@
 import NavItem from './NavItem';
+import '../component-styles/Navbar.css';
 
 function Navbar() {
     return (
