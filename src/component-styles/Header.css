@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 180px;
+  position: relative;
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    display: block;
+    /* margin-bottom: 30px; */
+  }
+}

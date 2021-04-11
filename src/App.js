@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react' /* a hook to let us use state for th
 import { BrowserRouter as Router, Route, useParams, } from "react-router-dom";
 import ReactPaginate from 'react-paginate';
 
+import './other-stylesheets/pagination.css';
+import './other-stylesheets/comments-grid.css';
+
 
 import Comment from "./components/Comment";
 import Navbar from './components/Navbar';
@@ -15,8 +18,8 @@ import Admin from './contents/Admin';
 
 function App() {
 
-  const [showForm, setShowForm] = useState(false) // state is a boolean with default false
-  /* we want to have the comments state globally available, and then we can pass it down to components where we want it as prop */
+  const [showForm, setShowForm] = useState(false) 
+ 
   const [comments, setComments] = useState( /* setComments is used to change comments, const[] sets both to useState data */
     []
   )

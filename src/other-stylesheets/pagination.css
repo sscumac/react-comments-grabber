@@ -1,0 +1,54 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.pagination li {
+  color: black;
+  padding: 0 8px;
+  font-size: 14px;
+}
+
+.pagination li a {
+  border: 1px solid #ffffff ;
+  padding: 1px 6px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.pagination .active a {
+  background-color: #55ACEE ;
+  padding: 1px 6px;
+  outline: none ;
+  color: white;
+  transition: all 1s;
+}
+
+.pagination li:focus {
+  outline: 1px solid
+}
+
+@media only screen and (max-width: 480px) {
+
+  .pagination {
+    justify-content: unset;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .pagination {
+    justify-content: unset;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-left: 20%;
+  }
+
+}

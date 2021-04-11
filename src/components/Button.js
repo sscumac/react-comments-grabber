@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import '../component-styles/Button.css'
 
 const Button = ({bcolor, color, text, height, onClick}) => { /* setting props for the button component*/
   return (

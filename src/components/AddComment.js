@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../component-styles/AddComment.css'
 
 // each input is gonna get its own piece of state (component level)
 function AddComment({ onAdd, onShow }) {

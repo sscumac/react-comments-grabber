@@ -1,0 +1,45 @@
+.btn {
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.5s;
+  border: none;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-save {
+  border: none;
+  font-weight: bold;
+  background-color: unset;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: none !important;
+  transition: color 0.3s;
+}
+
+.btn-save:active {
+  outline: none;
+  color: grey;
+}
+
+.btn-save:focus {
+  outline: none;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .btn {
+    position: absolute;
+    right: 30px;
+    top: 135px;
+    font-size: 14px;
+    height: 30px !important;
+  }
+}

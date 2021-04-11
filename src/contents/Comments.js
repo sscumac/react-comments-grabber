@@ -1,5 +1,6 @@
 import AddComment from "../components/AddComment";
 import Button from '../components/Button';
+import '../component-styles/Header.css';
 
 const Comments = ( {showForm, addComment, onAdd}) => {
   return (

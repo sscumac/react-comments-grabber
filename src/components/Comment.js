@@ -1,4 +1,4 @@
-import Button from './Button'
+import '../component-styles/Comment.css'
 
 const Comment = ({ comment, onDelete }) => {
   return (

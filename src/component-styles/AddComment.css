@@ -1,0 +1,46 @@
+.add-form {
+  width: 210px;
+  text-align: left;
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border-bottom: solid 1px black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.comment-create {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="submit"] {
+  padding: 0;
+}
+
+@media only screen and (max-width: 480px) {
+ 
+  .add-form {
+    position: absolute;
+    left: 40px;
+  }
+  .comment-create {
+    display: block;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+ 
+  .comment-create {
+    width: 280px;
+  } 
+}
