@@ -8,12 +8,10 @@ import './other-stylesheets/comments-grid.css';
 
 import Comment from "./components/Comment";
 import Navbar from './components/Navbar';
-import Dashboard from './contents/Dashboard';
+import About from './contents/About';
 import Comments from './contents/Comments';
-import Tasks from './contents/Tasks';
+import Edit from './contents/Edit';
 import Map from './contents/Map';
-import User from './contents/User';
-import Admin from './contents/Admin';
 
 
 function App() {
@@ -73,8 +71,9 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      
       <div className="container">
+        <Navbar />
         <Route exact path="/Comments">
           <Comments onAdd={() => setShowForm(!showForm)} showForm={showForm} />
           <div className="comments-grid">
@@ -87,26 +86,20 @@ function App() {
             breakClassName={"break-me"}
             pageCount={pageCount}
             marginPagesDisplayed={1}
-            pageRangeDisplayed={2}
+            pageRangeDisplayed={1}
             onPageChange={handlePageClick}
             containerClassName={"pagination"}
             subContainerClassName={"pages pagination"}
             activeClassName={"active"} />
         </Route>
-        <Route path="/Dashboard">
-          <Dashboard />
+        <Route path="/About">
+          <About />
         </Route>
-        <Route path="/Tasks">
-          <Tasks />
+        <Route path="/Edit">
+          <Edit />
         </Route>
         <Route path="/Map">
           <Map />
-        </Route>
-        <Route path="/User">
-          <User />
-        </Route>
-        <Route path="/Admin">
-          <Admin />
         </Route>
       </div>
     </Router>

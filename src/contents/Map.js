@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+import Header from '../components/Header';
 
-class Tasks extends Component {
+class Map extends Component {
 
   render() {
     return (
-      <h1>Map</h1>
+      <div className="header">
+        <Header title={"Map"} />
+        <p>work in progress</p>
+      </div>
     )
   }
 }
 
-export default Tasks
+export default Map

@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 nav {
-  background-color: black;
-  color: white;
+  width: 100%;
 }
 
 nav ul {
@@ -10,7 +11,7 @@ nav ul {
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  margin-right: 20px;
+  padding-left: unset;
 }
 
 nav ul li {
@@ -21,58 +22,36 @@ nav ul li {
   align-items: center;
 }
 
-nav ul li:hover a, nav ul li:hover {
-  background-color: white;
-  color: black;
-}
 
 nav ul li:first-child {
   width: 80%;
   text-align: left;
+  font-size: 24px;
 }
 
-nav ul li:first-child:hover a, nav ul li:first-child:hover {
-  background-color: unset;
-  color: white;
+nav ul li:first-child a {
+  border-bottom: #FDE441 solid 8px;
+  font-family: 'Lobster', cursive;
 }
 
-nav ul li:nth-last-child(2) {
-  border: solid white 1px;
-  height: 40px;
-  width: 10%;
-  border-radius: 10px;
-  text-align: unset;
-}
-
-nav ul li:nth-last-child(2) a {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-nav ul li:last-child:hover a, nav ul li:last-child:hover {
-  background-color: white;
-  color: black;
-}
-
-nav ul li:last-child {
-  background-color: white;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  margin-left: 5px;
-}
-
-nav ul li:last-child a {
-  color: black;
-  font-size: 20px;
+nav ul li:first-child a:hover {
+  color: unset;
 }
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: var(--main-black);
+  font-weight: bold;
   margin: 15px;
+  border-bottom: var(--main-black) solid 3px;
 }
+
+nav a:hover {
+  color: #9B5DE6;
+  /* border-bottom-color: #F15BB5; */
+}
+
+
 
 @media only screen and (max-width: 480px) {
   
@@ -80,22 +59,25 @@ nav a {
     padding: 0 5px;
     margin-right: 10px;
     font-size: 12px;
+    margin-top: 20px;
   }
-  nav a {
-    text-decoration: none;
-    color: white;
+  nav a { 
     margin: 5px;
   }
-  nav ul li:last-child {
-    background-color: unset;
-  }
-  
-  nav ul li:last-child a {
-    color: white;
-    font-size: 24px;
-  }
-  nav ul li:last-child a:hover {
-    color: unset
+
+  nav ul li:first-child {
+    width: 80%;
+    /* text-align: left; */
+    font-size: 16px;
   }
 
+  
+}
+  
+@media only screen and (max-width: 799px) {
+  nav ul li:first-child {
+    width: 80%;
+    text-align: left;
+    font-size: 18px;
+  }
 }

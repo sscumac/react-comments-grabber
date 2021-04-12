@@ -5,13 +5,11 @@ function Navbar() {
     return (
       <nav>
         <ul>
-          <NavItem item="LiveEO" tolink="https://live-eo.com/" ></NavItem>
+          <NavItem item="My React Comments Grabber" tolink="/comments" ></NavItem>
           <NavItem item="Map" tolink="/map" ></NavItem>
-          <NavItem item="Tasks" tolink="/tasks" ></NavItem>
-          <NavItem item="Dashboard" tolink="/dashboard" ></NavItem>
+          <NavItem item="Edit" tolink="/edit" ></NavItem>
+          <NavItem item="About" tolink="/about" ></NavItem>
           <NavItem item="Comments" tolink="/comments" ></NavItem>
-          <NavItem item="Admin" tolink="/admin" ></NavItem>
-          <NavItem item="L" tolink="/user" ></NavItem>
         </ul>
       </nav>
     )

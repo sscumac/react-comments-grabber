@@ -1,29 +1,33 @@
 .pagination {
   display: flex;
-  justify-content: flex-end;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
+  padding-left: 0px;
+  padding-top: 20px;
+  position: absolute;
+  bottom: -200px;
+  left: 42%;
 }
 
 .pagination li {
-  color: black;
-  padding: 0 8px;
+  color: var(--main-black);
+  padding: 0 12px;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .pagination li a {
-  border: 1px solid #ffffff ;
   padding: 1px 6px;
-  border-radius: 50%;
   outline: none;
   cursor: pointer;
 }
 
 .pagination .active a {
-  background-color: #55ACEE ;
+  /* background-color: #F15BB5 ; */
+  border: 3px solid #F15BB5;
   padding: 1px 6px;
   outline: none ;
-  color: white;
-  transition: all 1s;
+  color: var(--main-black);
+  user-select: none;
 }
 
 .pagination li:focus {
@@ -33,22 +37,41 @@
 @media only screen and (max-width: 480px) {
 
   .pagination {
-    justify-content: unset;
+    justify-content: center;
     margin-bottom: 20px;
     padding-bottom: 50px;
-    padding-top: 10px;
+    padding-top: 30px;
+    position:inherit;
+  }
+
+  .pagination li {
+    padding: 0 14px;
+    font-size: 16px;
   }
 
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 899px) {
   
   .pagination {
     justify-content: unset;
+    position:inherit;
     margin-bottom: 20px;
     padding-bottom: 50px;
-    padding-top: 10px;
-    padding-left: 20%;
+    padding-top: 30px;
   }
 
+  .pagination li {
+    padding: 0 14px;
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+
+  .pagination {
+    position:inherit;
+    justify-content: center;
+  }
 }
