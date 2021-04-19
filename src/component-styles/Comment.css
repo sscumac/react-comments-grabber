@@ -49,10 +49,11 @@
   text-align: left;
   font-size: 14px;
   overflow: hidden;
-  height: 15px;
+  height: 17px;
   background-color: #00F5D4;
   padding: 5px;
   padding-right: 15px;
+  padding-bottom: 5px;
 }
 
 .comment-header .id {
