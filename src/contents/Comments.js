@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'; 
-import AddComment from "../components/AddComment";
-import Button from '../components/Button';
+
 import Header from '../components/Header';
 import '../component-styles/Header.css';
 import ReactPaginate from 'react-paginate';
@@ -16,24 +15,26 @@ function Comments(props) {
   const [perPage] = useState(12);
   const [pageCount, setPageCount] = useState(0)
 
-
-  async function fetchComments() {
-    const res = await fetch('https://jsonplaceholder.typicode.com/comments')
-    const commentsFromApi = await res.json()
-    const slice = commentsFromApi.slice(offset, offset + perPage)
-    const postComments = slice.map(comment => <Comment key={comment.id} comment={comment} />)
-    setComments(postComments)
-    setPageCount(Math.ceil(commentsFromApi.length / perPage))
-  }
+  useEffect(() => {
+    async function fetchComments() {
+      const res = await fetch('https://jsonplaceholder.typicode.com/comments')
+      const commentsFromApi = await res.json()
+      const slice = commentsFromApi.slice(offset, offset + perPage)
+      const postComments = slice.map(comment => <Comment key={comment.id} comment={comment} />)
+      setComments(postComments)
+      setPageCount(Math.ceil(commentsFromApi.length / perPage))
+    };
+    fetchComments();
+  }, [offset, perPage])
 
   function handlePageClick(eve) {
     const selectedPage = eve.selected;
     setOffset(selectedPage + 1)
   };
 
-  useEffect(() => {
-    fetchComments()
-  }, [offset])
+  // useEffect(() => {
+  //   fetchComments();
+  // }, [offset])
 
 
   // Add Comment
