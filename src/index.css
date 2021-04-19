@@ -26,6 +26,18 @@ code {
   align-items: center;
 }
 
+p {
+  cursor: default;
+}
+
+h1 {
+  cursor: default;
+}
+
+h5 {
+  cursor: default;
+}
+
 
 ul {
   list-style-type:none;

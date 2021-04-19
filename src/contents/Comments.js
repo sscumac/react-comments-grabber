@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'; 
 
 import Header from '../components/Header';
-import '../component-styles/Header.css';
 import ReactPaginate from 'react-paginate';
 import Comment from "../components/Comment";
+
+import '../component-styles/Header.css';
+import '../other-stylesheets/pagination.css';
+import '../other-stylesheets/comments-grid.css';
 
 function Comments(props) {
   // const [showForm, setShowForm] = useState(false)
