@@ -7,7 +7,7 @@ class Map extends Component {
     return (
       <div className="header">
         <Header title={"Map"} />
-        <p>work in progress</p>
+        <p>(placeholder)</p>
       </div>
     )
   }
