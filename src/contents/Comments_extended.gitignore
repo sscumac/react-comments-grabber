@@ -8,7 +8,8 @@ import '../component-styles/Header.css';
 import '../other-stylesheets/pagination.css';
 import '../other-stylesheets/comments-grid.css';
 
-function Comments() {
+function Comments(props) {
+  // const [showForm, setShowForm] = useState(false)
 
   const [comments, setComments] = useState( /* setComments is used to change comments, const[] sets both to useState data */
     []
@@ -35,6 +36,30 @@ function Comments() {
   };
 
 
+  // Add Comment
+  // async function addComment(comment) {
+  //   const res = await fetch('https://jsonplaceholder.typicode.com/comments', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-type': 'application/json',
+  //     },
+  //     body: JSON.stringify(comment),
+  //   })
+
+  //   const newComment = await res.json()
+
+  // }
+
+  // Delete Comment
+  // async function deleteComment(id) {
+  //   const res = await fetch(`https://jsonplaceholder.typicode.com/comments/${id}`, {
+  //     method: 'DELETE',
+  //   })
+  //   res.status === 200
+  //     ? setComments(comments.filter((comment) => comment.id !== id))
+  //     : alert('Error Deleting This Comment')
+  // }
+
   return (
     <>
       <div className="header">
@@ -59,5 +84,15 @@ function Comments() {
   )
 
 }
+    
+// comment create form
+    //   <div className="comment-create">
+    //     {/* {showForm && <AddComment onAdd={addComment} />} */}
+    //     {/* <AddComment onAdd={addComment} onShow={showForm} /> */}
+    //     {/* <Button color={showForm ? "red" : "white"} bcolor={showForm ? "white" : "black"} height={50} text={showForm ? "close" : "create comment"} onClick={onAdd} /> */}
+    //   </div>
+    // </div>
+//  )
+// }
 
 export default Comments
