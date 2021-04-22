@@ -46,7 +46,7 @@ function Comments() {
       {(loading === true)
           ? <p>loading comments...</p>
           : <div className="comments-grid">
-            {comments}  
+              {comments}  
             </div>
       }
       <ReactPaginate
