@@ -13,9 +13,11 @@ function Comments() {
   const [comments, setComments] = useState( /* setComments is used to change comments, const[] sets both to useState data */
     []
   )
+  const [loading, setLoading] = useState(true)
   const [offset, setOffset] = useState(0);
   const [perPage] = useState(12);
   const [pageCount, setPageCount] = useState(0)
+
 
   useEffect(() => {
     async function fetchComments() {
@@ -23,6 +25,7 @@ function Comments() {
       const commentsFromApi = await res.json()
       const slice = commentsFromApi.slice(offset, offset + perPage)
       const postComments = slice.map(comment => <Comment key={comment.id} comment={comment} />)
+      setLoading(false)
       setComments(postComments)
       setPageCount(Math.ceil(commentsFromApi.length / perPage))
     };
@@ -40,9 +43,12 @@ function Comments() {
       <div className="header">
         <Header title={"Comments"} />
       </div>
-      <div className="comments-grid">
-        {comments}
-      </div>
+      {(loading === true)
+          ? <p>loading comments...</p>
+          : <div className="comments-grid">
+            {comments}  
+            </div>
+      }
       <ReactPaginate
         previousLabel={"<"}
         nextLabel={">"}
